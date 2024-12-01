@@ -1,0 +1,323 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: "Dela Gothic One";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/DelaGothicOne.woff2") format("woff2");
+}
+
+/* Вспомогательные классы */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+}
+
+/* Основные стили */
+html {
+    height: 100%;
+    font-size: 16px;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "Dela Gothic One", "Roboto", sans-serif;
+    font-size: 1rem;
+    
+}
+
+button {
+    background-color: #4146CE;
+    border: none;
+    color: white;
+    font-family: "Dela Gothic One", "Roboto", sans-serif;
+    font-size: 1.5rem;
+    width: 18.5rem;
+    height: 4.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4.6875rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #BEB931;
+    color: #4146CE;
+}
+a {
+    transition: color 0.3s ease;
+}
+.admin-login-page {
+    font-size: 24px;
+}
+.admin-login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* вы можете задать высоту страницы */
+}
+.admin-login-input {
+    height: 36px;
+    border-radius: 0;
+    border: 1px solid #808080;
+    caret-color: #4146CE; /* Цвет курсора */
+    font-size: 24px;
+    font-family: "Dela Gothic One", "Roboto", sans-serif;
+    cursor: text; /* Стандартный текстовый курсор */
+    margin: 10px;
+}
+.admin-login-input:focus {
+    
+    border-radius: 0;
+    border: 1px solid #4146CE;
+    outline: none;
+
+}
+.admin-password-input {
+    display: inline-block;
+    margin-left: 168px;
+}
+.admin-login-button {
+    border: none;
+    font-family: "Dela Gothic One", "Roboto", sans-serif;
+    font-size: 24px;
+    background-color: #4146CE;
+    color: #ffffff;
+    border-radius: 75px;
+    padding: 10px;
+    width: 150px;
+    align-items: center;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+.admin-login-button:hover {
+    background-color: #BEB931;
+    color: #4146CE;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #4146CE;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 16px;
+    flex: 0 0 auto;
+}
+
+footer a {
+    color: #BEB931;
+}
+
+footer a:hover {
+    color: #31BFBA;
+}
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    overflow-x: auto;
+    
+}
+
+.admin-panel h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-panel h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.table-group {
+    background-color: white;
+    border: 1px solid #808080;
+    padding: 1.5rem;
+    width: 20rem;
+    padding: 50px;
+    margin-bottom: 25px;
+
+}
+
+.table-group h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.table-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.table-buttons a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: #4146CE;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4.6875rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-buttons a:hover {
+    background-color: #BEB931;
+    color: #4146CE;
+}
+
+.logout-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4.6875rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+.admin-link {
+    text-decoration: none;
+}
+.admin-panel-title {
+    font-size: 24px;
+   
+}
+.admin-panel-subtitle {
+    font-size: 20px;
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: block; /* Сделать таблицу блочным элементом */
+    max-width: 1200px;
+    max-height: 500px;
+    
+}
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+input {
+    font-family: "Dela Gothic One", "Roboto", sans-serif;
+    margin: 10px;
+    caret-color: #4146CE; /* Цвет курсора */
+    
+}
+input:focus {
+    outline: none;
+    border: 2px solid #4146CE;
+    border-radius: 2px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 50px;
+  }
+
+  .header-logo:hover svg path {
+    fill: #4146CE;
+}
+.header-logo-icon path {
+    transition: fill 0.3s ease;
+}
+
+.header-logo:hover span{
+    color: #4146CE;
+
+}
+  
+  .header-logo-divider {
+    width: 1px;
+    height: 92px;
+    background-color: #808080;
+    margin-left: 20px;
+  }
+  
+.header-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .header-logo-text:hover {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4146CE;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+
+.admin-welcome {
+    border: 1px solid #808080;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
